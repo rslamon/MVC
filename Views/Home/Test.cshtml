@@ -1,0 +1,16 @@
+﻿@model testsql2.Models.RegionsViewModel
+
+@{
+    ViewBag.Title = "Test";
+}
+
+
+<div style="font-family:Arial">
+    <h2>Index</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.ListBoxFor(m => m.SelectedRegions, Model.Regions, new { size = 5 })
+        <br />
+        <input type="submit" value="Submit" />
+    }
+</div>

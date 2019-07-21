@@ -1,0 +1,18 @@
+﻿@model testsql2.Models.CustomerViewModel
+
+@{
+    ViewBag.Title = "Cust";
+}
+
+
+<div style="font-family:Arial">
+    <h2>Index</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.ListBoxFor(m => m.SelectedCustItems, Model.CustItems, new { size = 5 })
+        <br />
+        @Html.ListBoxFor(m => m.SelectedCity, Model.City, new { size = 5 })
+        <br />
+        <input type="submit" value="Submit" />
+    }
+</div>
